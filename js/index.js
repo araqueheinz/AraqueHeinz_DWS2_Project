@@ -4,6 +4,7 @@ const KEY = `2055f069ebab88a96da56841e6da6b78`;
 const imageURL = `https://image.tmdb.org/t/p/w500/`;
 const urlPopularMovies = `https://api.themoviedb.org/3/movie/popular?api_key=${KEY}&language=en-US&page=1`;
 const urlTopRated = `https://api.themoviedb.org/3/movie/top_rated?api_key=${KEY}&language=en-US&page=1`;
+const urlSearch = `https://api.themoviedb.org/3/search/movie?api_key=${KEY}&language=en-US&query=zootopa`;
 
 let popularMovies = document.querySelector('#most-popular-movies');
 let featuredMoives = document.querySelector('#featured-movies');
@@ -97,6 +98,17 @@ fetch(urlTopRated)
     topRatedMovies.innerHTML = content;
    })
 
+  
+/* /////////////////////////////////////////////////////////////////////// */
+/* /                            SEARCH                                   / */
+/* /////////////////////////////////////////////////////////////////////// */
     
 
+fetch(urlSearch)
+.then(items => items.json())
+.then(items => { console.log(items)});
+
+document.querySelector('#search-bottom').addEventListener('click', function(){
+    alert('hola');
+})
 // data to the #results section

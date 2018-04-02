@@ -1,0 +1,7 @@
+
+@mixin text-typo($transform, $decor, $spacing, $weight){
+    text-transform: $transform;
+    text-decoration: $decor;
+    letter-spacing: $spacing;
+    font-weight: $weight
+}

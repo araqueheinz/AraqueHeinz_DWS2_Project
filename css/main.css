@@ -1,3 +1,7 @@
+body > section, header, footer, #most-popular-movies {
+  margin-left: auto;
+  margin-right: auto; }
+
 html {
   line-height: 1.4;
   font-size: 62.5%; }
@@ -9,16 +13,12 @@ body {
 
 body > section {
   max-width: 1200px;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto; }
+  position: relative; }
 
 header, footer {
   background-color: #302f2f;
   position: relative;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto; }
+  max-width: 1200px; }
 
 ul, li {
   margin: 0;
@@ -27,7 +27,8 @@ ul, li {
 h1, h2, h3, h4, p, a {
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: .5px; }
+  letter-spacing: 0.5px;
+  font-weight: normal; }
 
 h1 {
   font-size: 2.8rem; }
@@ -41,6 +42,8 @@ h3 {
 h4, p {
   font-size: 1.4rem;
   text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0.5px;
   font-weight: lighter;
   color: #888888; }
 
@@ -86,9 +89,7 @@ header nav::after {
 ==================================================
 ================================================== */
 #most-popular-movies {
-  background-color: #100f0f;
-  margin-right: auto;
-  margin-left: auto; }
+  background-color: #100f0f; }
   #most-popular-movies h2 {
     font-size: 1.6rem;
     display: block;
@@ -107,17 +108,17 @@ header nav::after {
       content: '';
       display: block;
       clear: both; }
-    #most-popular-movies ul li {
-      list-style: none;
-      margin-bottom: 5px;
-      position: relative;
-      float: left;
-      width: calc(100%/2 - 1rem); }
-      #most-popular-movies ul li img {
-        height: 300px;
-        width: 100%; }
-      #most-popular-movies ul li:not(:nth-of-type(2n)) {
-        margin-right: 1rem; }
+  #most-popular-movies li {
+    list-style: none;
+    margin-bottom: 5px;
+    position: relative;
+    float: left;
+    width: calc(100%/2 - 1rem); }
+    #most-popular-movies li img {
+      height: 300px;
+      width: 100%; }
+    #most-popular-movies li:not(:nth-of-type(2n)) {
+      margin-right: 1rem; }
 
 /* FEATURED MOVIES
 ==================================================

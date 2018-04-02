@@ -1,3 +1,8 @@
+@import 'utilities/var';
+@import 'utilities/mixing';
+@import 'utilities/placeholders';
+
+
 html {
     line-height: 1.4;
     font-size: 62.5%;
@@ -5,7 +10,7 @@ html {
     }
 
 body {
-        font-family: '"Helvetica Neue", Helvetica, Arial, sans-serif';
+        font-family: $font;
         font-weight: 300;  
         margin: 0;
     }
@@ -13,16 +18,14 @@ body {
 body > section{
     max-width: 1200px;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    @extend %center-element;
 }
 
 header, footer{
     background-color: #302f2f;
     position: relative;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    @extend %center-element;
     }
 
 ul, li{
@@ -31,9 +34,7 @@ ul, li{
 }
 
 h1, h2, h3, h4, p, a{
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: .5px;
+    @include text-typo(uppercase, none, 0.5px , normal);
   
   }
 
@@ -49,8 +50,8 @@ h1, h2, h3, h4, p, a{
  }
  h4, p{
    font-size: 1.4rem;
-   text-transform: none;
-   font-weight: lighter;
+
+   @include text-typo(none, none, 0.5px , lighter);
    color: #888888;
  }
  a{
@@ -120,9 +121,8 @@ header{
 #most-popular-movies{
     
    
-    background-color: #100f0f;
-    margin-right: auto;
-    margin-left: auto;
+    background-color: $primary-color;
+    @extend %center-element;
 
     h2{
         font-size: 1.6rem;
@@ -147,7 +147,7 @@ header{
             display: block;
             clear: both;
         }
-
+    }
         
     li{
 
@@ -168,7 +168,7 @@ header{
 
     }
 
-    }
+    
 
     
 }
@@ -179,7 +179,7 @@ header{
 
 #featured-movies{
 
-    background-color: #100f0f;
+    background-color: $primary-color;
     
     
     h2{
@@ -264,7 +264,7 @@ header{
             position: relative;
             margin-bottom: 15px;
             float: left;
-            width: calc(100%/5 - 5rem);;
+            width: calc(100%/5 - 5rem);
 
             &:not(:nth-of-type(6n)) {
                 margin-right: 10px;
