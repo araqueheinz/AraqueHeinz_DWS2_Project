@@ -118,8 +118,13 @@ document.querySelector('#search-bottom').addEventListener('click', function(){
         console.log(items);
 
         if(items.results.length == 0){
-            alert('nothing found')
 
+            let content = `
+            <h1>No Results!</h1>
+            <ul>`;
+            content += '</ul>';
+
+                document.querySelector('#top-rated').innerHTML = content;
 
         }
         else{
@@ -136,11 +141,9 @@ document.querySelector('#search-bottom').addEventListener('click', function(){
                 `
             })
         
-             content += '</ul>';
+            content += '</ul>';
 
-                document.querySelector('#top-rated').innerHTML = content;
-
-
+            document.querySelector('#top-rated').innerHTML = content;
         }
     
 })
