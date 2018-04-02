@@ -1,0 +1,197 @@
+html {
+  line-height: 1.4;
+  font-size: 62.5%; }
+
+body {
+  font-family: '"Helvetica Neue", Helvetica, Arial, sans-serif';
+  font-weight: 300;
+  margin: 0; }
+
+body > section {
+  max-width: 1200px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto; }
+
+header, footer {
+  background-color: #302f2f;
+  position: relative;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+
+ul, li {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, p, a {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .5px; }
+
+h1 {
+  font-size: 2.8rem; }
+
+h2 {
+  font-size: 2.6rem; }
+
+h3 {
+  font-size: 2rem; }
+
+h4, p {
+  font-size: 1.4rem;
+  text-transform: none;
+  font-weight: lighter;
+  color: #888888; }
+
+a {
+  color: #FFFFFF; }
+
+/* /////////////////////////////////////////////////////////////////////// */
+/* /                         MASTER CONTROLS                             / */
+/* /////////////////////////////////////////////////////////////////////// */
+header nav li {
+  display: inline-block;
+  padding: 3px 12px 3px 12px;
+  margin: 0; }
+  header nav li a {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: #d5d5d5; }
+  header nav li:not(:nth-of-type(5n)) {
+    border-left: #aca8a8 solid 1px; }
+
+header nav p {
+  margin: 0;
+  padding-top: 6px;
+  position: absolute;
+  top: 0;
+  right: 20px; }
+
+header nav ul {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 0;
+  text-align: center; }
+
+header nav::after {
+  content: '';
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  height: 1px;
+  width: 100%;
+  display: block;
+  clear: both; }
+
+/* MOST POPULAR MOVIES
+==================================================
+================================================== */
+#most-popular-movies {
+  background-color: #100f0f;
+  margin-right: auto;
+  margin-left: auto; }
+  #most-popular-movies h2 {
+    font-size: 1.6rem;
+    display: block;
+    color: papayawhip;
+    background-color: rgba(17, 17, 17, 0.65);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+  #most-popular-movies ul {
+    padding-top: 7px;
+    text-align: center;
+    position: relative;
+    left: 5px; }
+    #most-popular-movies ul::after {
+      content: '';
+      display: block;
+      clear: both; }
+    #most-popular-movies ul li {
+      list-style: none;
+      margin-bottom: 5px;
+      position: relative;
+      float: left;
+      width: calc(100%/2 - 1rem); }
+      #most-popular-movies ul li img {
+        height: 300px;
+        width: 100%; }
+      #most-popular-movies ul li:not(:nth-of-type(2n)) {
+        margin-right: 1rem; }
+
+/* FEATURED MOVIES
+==================================================
+================================================== */
+#featured-movies {
+  background-color: #100f0f; }
+  #featured-movies h2 {
+    font-size: 1.6rem;
+    display: block;
+    color: papayawhip;
+    background-color: rgba(17, 17, 17, 0.65);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+  #featured-movies ul {
+    text-align: center;
+    position: relative;
+    left: 5px; }
+    #featured-movies ul::after {
+      content: '';
+      display: block;
+      clear: both; }
+    #featured-movies ul li {
+      list-style: none;
+      position: relative;
+      margin-bottom: 5px;
+      float: left;
+      width: calc(100%/4 - 1rem); }
+      #featured-movies ul li img {
+        height: 150px;
+        width: 100%; }
+      #featured-movies ul li:not(:nth-of-type(4n)) {
+        margin-right: 1rem; }
+
+/* /////////////////////////////////////////////////////////////////////// */
+/* /                         TOP RATED MOVIES                            / */
+/* /////////////////////////////////////////////////////////////////////// */
+#top-rated h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: lighter; }
+
+#top-rated ul {
+  text-align: center;
+  position: relative;
+  left: 4px; }
+  #top-rated ul::after {
+    content: '';
+    display: block;
+    clear: both; }
+  #top-rated ul li {
+    list-style: none;
+    position: relative;
+    margin-bottom: 15px;
+    float: left;
+    width: calc(100%/5 - 5rem); }
+    #top-rated ul li img {
+      height: 300px;
+      width: 100%;
+      border-radius: 20px; }
+    #top-rated ul li:not(:nth-of-type(6n)) {
+      margin-right: 10px; }
+
+/* /////////////////////////////////////////////////////////////////////// */
+/* /                             FOOTER                                  / */
+/* /////////////////////////////////////////////////////////////////////// */
+footer {
+  background-color: #302f2f;
+  height: 30px;
+  width: 100%; }
+  footer p {
+    color: #d5d5d5;
+    font-size: 0.8rem;
+    position: relative;
+    top: 10px;
+    left: 10px; }
